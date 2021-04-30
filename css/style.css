@@ -1,0 +1,36 @@
+h1{
+    text-align: center;
+    font-family: 'Courier New', monospace;;
+}
+#queueContainer{
+    max-width: 200px;
+    min-height: 200px;
+    border: 2px solid red;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    flex-wrap: wrap;
+
+}
+.queueItem{
+  flex: 0 1 100%;
+  margin: 0;
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+.inputContainer{
+    margin: auto;
+    width: 210px;
+    margin-top: 20px;
+}
+button{
+    font-weight: bold;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+button:hover{
+    filter: brightness(85%);
+}
