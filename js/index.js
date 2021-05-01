@@ -31,6 +31,8 @@ addBtn.onclick = function(){
         newItem.setAttribute('class','queueItem');
         newItem.innerHTML = currInput.value;
         queueContainer.prepend(newItem);
+        localStorage.setItem('counter',(19-queue.data.length));
+        counter.innerHTML = localStorage.getItem('counter');
     }
     currInput.value='';
 }
@@ -43,8 +45,16 @@ removeBtn.onclick = function(){
         queueContainer.removeChild(queueContainer.lastElementChild);
         queue.remove();
         localStorage.setItem('data',JSON.stringify(queue.data));
+        localStorage.setItem('counter',(19-queue.data.length));
+        counter.innerHTML = localStorage.getItem('counter');
     }
 }
+
+localStorage.setItem('counter',(19-queue.data.length));
+let counterContainer = document.getElementsByClassName('counterContainer')[0]
+let counter = document.createElement('p')
+counter.innerHTML = localStorage.getItem('counter');
+counterContainer.appendChild(counter);
 
 queue.data.forEach(function(el){
     let item = document.createElement('p');

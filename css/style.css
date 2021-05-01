@@ -1,6 +1,11 @@
-h1{
+header {
     text-align: center;
-    font-family: 'Courier New', monospace;;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.counterContainer p{
+    display: inline;
 }
 #queueContainer{
     max-width: 200px;
